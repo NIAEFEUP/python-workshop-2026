@@ -31,3 +31,21 @@
 #   |        | ######## |
 #   |        | ######## |
 #   +--------+----------+
+
+dim = int(input())
+center = dim // 2
+
+for i in range(dim):
+    row = ""
+    for j in range(dim):
+        if dim % 2 == 1:
+            if i == center and j == center:
+                row += "0"
+            else:
+                row += "#"
+        else:
+            if i in (center - 1, center) and j in (center - 1, center):
+                row += "0"
+            else:
+                row += "#"
+    print(row)
