@@ -11,3 +11,17 @@
 #       -> "srettel evomer ot deed on htiw ecnetnes doog yltcefrepP"
 #   rm_letter_rev("l", "Please let me keep my letters!")
 #       -> "!srette ym peek em te esaeP"
+
+def rm_letter_rev(ch, s):
+    result = ""
+    for c in s:
+        if c != ch:
+            result += c
+    return result[::-1]
+
+
+if __name__ == "__main__":
+    print(rm_letter_rev("s", "A style guide is about consistency"))
+    print(rm_letter_rev(" ", "a nut for a jar of tuna"))
+    print(rm_letter_rev("a", "Perfectly good sentence with no need to remove letters"))
+    print(rm_letter_rev("l", "Please let me keep my letters!"))

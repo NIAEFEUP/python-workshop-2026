@@ -25,3 +25,8 @@
 #   |        | Step: 1                                  |
 #   |        | On the ground!                           |
 #   +--------+------------------------------------------+
+
+steps = int(input())
+for i in range(steps, 0, -1):
+    print("Step:", i)
+print("On the ground!")

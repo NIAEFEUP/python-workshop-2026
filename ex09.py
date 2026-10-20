@@ -7,3 +7,10 @@
 #   789   -> 987
 #   45654 -> 45654
 #   190   -> 91
+
+num = int(input())
+reverse = 0
+while num > 0:
+    reverse = reverse * 10 + num % 10
+    num //= 10
+print(reverse)

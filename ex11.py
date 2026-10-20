@@ -16,4 +16,24 @@
 #   +----------+----------+----------+
 #   | 1278     | 6431     | 81732416 |
 #   +----------+----------+----------+
+
+n1 = int(input())
+n2 = int(input())
+
 # Count digits of n1 (same as n2)
+count = 0
+temp = n1
+while temp > 0:
+    count += 1
+    temp //= 10
+
+result = 0
+for i in range(count):
+    d1 = n1 % 10
+    d2 = n2 % 10
+    power = 2 * (count - 1 - i)
+    result += d1 * (10 ** (power + 1)) + d2 * (10 ** power)
+    n1 //= 10
+    n2 //= 10
+
+print(result)

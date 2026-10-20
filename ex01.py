@@ -7,3 +7,7 @@
 #   3 -> 369
 #   5 -> 615
 #   9 -> 1107
+
+n = int(input())
+result = n + int(str(n) * 2) + int(str(n) * 3)
+print(result)
